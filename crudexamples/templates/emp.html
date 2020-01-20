@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+</head>
+<body>
+<form action="http://localhost:8000/save/" method="post">{% csrf_token %}
+id:<input type="text" name="id" value="{{dumy.id}}"><br><br>
+name:<input type="text" name="name" value="{{dumy.name}}"><br><br>
+sal:<input type="text" name="sal" value="{{dumy.sal}}"><br><br>
+<input type="submit"><br><br>
+    <table BORDER="1">
+        <thead>
+        <td>id</td>
+        <td>name</td>
+        <td>sal</td>
+
+        </thead>
+        {% for i in Emps %}
+        <tbody>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.sal}}</td>
+        </tbody>
+        {% endfor%}
+
+
+
+
+
+
+
+
+    </table>
+
+
+
+</form>
+
+
+</body>
+</html>
+
+
+
